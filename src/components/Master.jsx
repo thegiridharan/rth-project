@@ -59,7 +59,7 @@ function Block({ title, collection_name }) {
                     {data !== null && data.map((item, index) => (
                         <div key={index} className="flex flex-row items-center justify-between p-[6px] hover:bg-black/10 bg-black/5 rounded-[4px]">
                             <p>{item["option"]}</p>
-                            <Trash2 className="h-4 w-4 text-red-600 cursor-pointer" onClick={() => deleteDatum(item.id)} />
+                            <Trash2 className="h-4 w-4 hover:text-red-600 cursor-pointer" onClick={() => deleteDatum(item.id)} />
                         </div>
                     ))}
                 </div>
