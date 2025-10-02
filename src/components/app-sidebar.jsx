@@ -21,9 +21,9 @@ import { OptionContext } from "@/utils/context";
 
 const data = {
     user: {
-        name: "shadcn",
-        email: "m@example.com",
-        avatar: "/avatars/shadcn.jpg",
+        name: "Giridharan",
+        email: "thegiridharan.work@gmail.com",
+        avatar: "https://camo.githubusercontent.com/005fc5d7d32b75cddea75ae954aa1ac517919feafc78340001443abf87b31033/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f616c6f68652f617661746172732f706e672f6d656d6f5f33342e706e67",
     },
     navMain: [
         {
