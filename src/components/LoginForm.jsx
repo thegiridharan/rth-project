@@ -10,8 +10,15 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useRouter } from "next/navigation";
 
 export function LoginForm({ className, ...props }) {
+  const router = useRouter();
+  const submit = (e) => {
+    e.preventDefault();
+    router.replace("/dashboard/");
+  }
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
@@ -71,7 +78,7 @@ export function LoginForm({ className, ...props }) {
                   </div>
                   <Input id="password" type="password" required />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full cursor-pointer" onClick={submit}>
                   Login
                 </Button>
               </div>
