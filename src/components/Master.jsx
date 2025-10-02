@@ -34,6 +34,13 @@ function Block({ title, collection_name }) {
         }
     }
 
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            insertData({ option: project });
+        }
+    }
+
     const deleteDatum = (id) => {
         setId(id);
         deleteData(collections, id).then((res) => toast.success("Document deleted successfully."));
@@ -44,7 +51,7 @@ function Block({ title, collection_name }) {
             <div className="w-[350px] p-[10px] outline-1 outline-gray-200 rounded-[4px] flex flex-col gap-[10px]">
                 <p className="font-semibold">{title}</p>
                 <div className="flex flex-row gap-[5px]">
-                    <Input value={project || ""} type="text" placeholder="Type here.." onChange={(e) => setProject(e.target.value)} />
+                    <Input value={project || ""} type="text" placeholder="Type here.." onChange={(e) => setProject(e.target.value)} onKeyDown={handleKeyDown} />
                     <Button type="variant" onClick={() => { insertData({ option: project }) }} className="cursor-pointer">Add</Button>
                 </div>
                 { }
